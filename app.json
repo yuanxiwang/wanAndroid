@@ -1,13 +1,62 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/gzh/gzh",
+    "pages/menu/menu",
+    "pages/project/project",
+    "pages/struck/struck",
+    "pages/web/web"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "玩Android",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
+  "tabBar": {
+    "color": "#2c2c2c",
+    "selectedColor": "#d81e06",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "box-shadow": "0 0 6px 0",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/nav/ic_home.png",
+        "selectedIconPath": "images/nav/ic_home_selected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/struck/struck",
+        "iconPath": "images/nav/ic_struck.png",
+        "selectedIconPath": "images/nav/ic_struck_selected.png",
+        "text": "知识体系"
+      },
+      {
+        "pagePath": "pages/gzh/gzh",
+        "iconPath": "images/nav/ic_gzh.png",
+        "selectedIconPath": "images/nav/ic_gzh_selected.png",
+        "text": "公众号"
+      },
+      {
+        "pagePath": "pages/menu/menu",
+        "iconPath": "images/nav/ic_menu.png",
+        "selectedIconPath": "images/nav/ic_menu_selected.png",
+        "text": "导航"
+      },
+      {
+        "pagePath": "pages/project/project",
+        "iconPath": "images/nav/ic_project.png",
+        "selectedIconPath": "images/nav/ic_project_selected.png",
+        "text": "项目"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
 }

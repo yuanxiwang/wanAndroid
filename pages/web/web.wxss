@@ -1,0 +1,6 @@
+/* pages/web/web.wxss */
+.container{
+  width: 100%;
+  height: 100%;
+  background: #ee3fee
+}

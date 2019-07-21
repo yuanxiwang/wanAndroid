@@ -1,13 +1,25 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<scroll-view class="scroll-view"scroll='vertical'>
+  <swiper class="swiper" 
+  indicator-dots="{{indecatorDots}}"
+  autoplay="{{autoplay}}"
+  circular="{{circular}}"
+  vertical="{{vertical}}" 
+  interval="{{interval}}"
+  duration="{{duration}}"
+  previous-margin="{{perviousMargin}}"
+  next-margin="{{nextMargin}}">
+    <view wx:for='{{imgPaths}}' wx:key='index'>
+      <swiper-item class='swiper-item'>
+        <image src="{{item.imagePath}}" bindtap='bannerClick' data-bannerClick='{{item}}' mode="aspectFill" class="swiper-item-images"></image>
+      </swiper-item>
+    </view>
+  </swiper>
+  <block wx:for="{{contentList}}">
+    <view class="viewContent">
+      
+    </view>
+  </block>
+  </scroll-view>
 </view>

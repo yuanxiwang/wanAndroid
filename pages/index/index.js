@@ -33,6 +33,7 @@ Page({
     var that = this;
     //调用请求封装方法
     call.request('/banner/json', 'GET', this.onSuccess, this.doFail);
+    call.request("article/list/" + page + "/json", 'GET', this.onArticleSuccess, this.onArticleFail);
   },
   onSuccess:function(data){
     var that = this;

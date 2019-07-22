@@ -22,6 +22,52 @@
   padding: 0;
 }
 .viewContent{
-  background: blue;
+  background: white;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rpx;
+}
+.item-tag-author-time{
+  display: flex;
+  flex-direction: row;
+}
+.item-tag{
+  border: 0.5rpx solid red;
+  border-radius: 10rpx;
+  font-size: 20rpx;
+  padding-left: 5rpx;
+  padding-right: 5rpx;
+  padding-bottom: 5rpx;
+  margin-right: 10rpx;
+  margin-left: 10rpx;
+  display: flex;
+  justify-content: center;
+}
+.item-author{
+  background: white;
+  font-size: 30rpx;
+  display: inline;
+  flex: 1;
+  box-sizing: border-box;
+}
+.item-publish-time{
+  font-size: 30rpx;
+  display: inline;
+  margin-right: 20rpx;
+}
+.item-content{
+  width: 100%;
+  display: flex;
+  margin-top: 20rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+.divider{
+  background: #999;
+  margin-top: 20rpx;
+  width: 100%;
+  height: 5rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
 }

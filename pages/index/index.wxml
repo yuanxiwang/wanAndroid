@@ -1,28 +1,33 @@
 <!--index.wxml-->
 <view class="container">
-<scroll-view class="scroll-view" scroll-y='true' bindscrolltolower='loadMore'>
-  <swiper class="swiper" 
-  indicator-dots="{{indecatorDots}}"
-  autoplay="{{autoplay}}"
-  circular="{{circular}}"
-  vertical="{{vertical}}" 
-  interval="{{interval}}"
-  duration="{{duration}}"
-  previous-margin="{{perviousMargin}}"
-  next-margin="{{nextMargin}}">
-    <view wx:for='{{imgPaths}}' wx:key='index'>
-      <swiper-item class='swiper-item'>
-        <image src="{{item.imagePath}}" bindtap='bannerClick' data-bannerClick='{{item}}' mode="aspectFill" class="swiper-item-images"></image>
-      </swiper-item>
+  <scroll-view class="scroll-view" scroll-y='true' bindscrolltolower='loadMore'>
+    <swiper class="swiper" 
+    indicator-dots="{{indecatorDots}}"
+    autoplay="{{autoplay}}"
+    circular="{{circular}}"
+    vertical="{{vertical}}" 
+    interval="{{interval}}"
+    duration="{{duration}}"
+    previous-margin="{{perviousMargin}}"
+    next-margin="{{nextMargin}}">
+      <view wx:for='{{imgPaths}}' wx:key='index'>
+        <swiper-item class='swiper-item'>
+          <image src="{{item.imagePath}}" bindtap='bannerClick' data-bannerClick='{{item}}' mode="aspectFill" class="swiper-item-images"></image>
+        </swiper-item>
+      </view>
+    </swiper>
+    <view wx:for="{{airtcleList}}" wx:key="index" class="viewContent">
+      <view class="viewContent" bindtap="item-click">
+      <view class="item-tag-author-time">
+          <span wx:for="{{item.tags}}" wx:key="index" hidden="{{item.tags.length <= 0}}">
+            <span class="item-tag">{{item.name}}</span>
+          </span>
+          <span class="item-author">{{item.author}}</span>
+          <span class="item-publish-time">{{item.niceDate}}</span>
+          </view>
+          <view class="item-content">{{item.title}}</view>
+          <view class="divider"></view>
+      </view>
     </view>
-  </swiper>
-  <view wx:for="{{airtcleList}}" wx:key="index" class="viewContent">
-    <view class="viewContent" bindtap="item-click">
-      <span wx:for="{{item.tags}}" hidden="{{item.tags.length <= 0}}">
-        <span class="item-tag">{{item.name}}</span>
-      </span>
-      <span class="item-auther">{{item.author}}</span>
-    </view>
-  </view>
   </scroll-view>
 </view>

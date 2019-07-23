@@ -31,6 +31,7 @@
 .item-tag-author-time{
   display: flex;
   flex-direction: row;
+  padding-left: 10rpx;
 }
 .item-tag{
   border: 0.5rpx solid red;
@@ -67,7 +68,21 @@
   background: #999;
   margin-top: 20rpx;
   width: 100%;
-  height: 5rpx;
+  height: 1rpx;
   padding-left: 10rpx;
   padding-right: 10rpx;
+}
+.classify{
+  font-size: 25rpx;
+  margin-left: 10rpx;
+  margin-top: 20rpx;
+  color: #999;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.iconCollect{
+  width: 50rpx;
+  height: 50rpx;
+  display: flex;
+  float: right;
+  background: url();
 }

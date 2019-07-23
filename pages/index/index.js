@@ -88,5 +88,8 @@ Page({
   },
   loadMoreFail:function(){
     console.log("加载失败")
+  },
+  itemClick:function(){
+
   }
 })

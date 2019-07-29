@@ -16,8 +16,8 @@
         </swiper-item>
       </view>
     </swiper>
-    <view wx:for="{{airtcleList}}" wx:key="index" class="viewContent">
-      <view class="viewContent" bindtap="itemClick">
+    <view wx:for="{{airtcleList}}" wx:key="index">
+      <view class="viewContent" bindtap="itemClick" data-viewContent="{{item}}">
       <view class="item-tag-author-time">
           <span wx:for="{{item.tags}}" wx:key="index" hidden="{{item.tags.length <= 0}}">
             <span class="item-tag">{{item.name}}</span>
@@ -27,7 +27,6 @@
           </view>
           <view class="item-content">{{item.title}}</view>
           <span class='classify'>{{item.superChapterName}} / {{item.chapterName}}</span>
-          <span class="iconCollect"></span>
           <view class="divider"></view>
       </view>
     </view>

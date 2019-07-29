@@ -89,7 +89,10 @@ Page({
   loadMoreFail:function(){
     console.log("加载失败")
   },
-  itemClick:function(){
-
+  itemClick:function(data){
+    console.log(data.currentTarget.dataset)
+    wx.navigateTo({
+      url: '../web/web?webInfo=' + data.currentTarget.dataset.viewcontent.link,
+    })
   }
 })

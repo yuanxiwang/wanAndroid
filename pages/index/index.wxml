@@ -12,18 +12,19 @@
         </swiper-item>
       </view>
     </swiper>
-      <view class="item-tag-author-time">
-<view wx:for="{{airtcleList}}" wx:key="index" class="viewContent">
+    <view wx:for="{{airtcleList}}" wx:key="index" class="viewContent">
       <view class="viewContent" bindtap="itemClick" data-item="{{item}}">
-        <view class="item-tag-author-time">          <span wx:for="{{item.tags}}" wx:key="index" hidden="{{item.tags.length <= 0}}">
+        <view class="item-tag-author-time">
+          <span wx:for="{{item.tags}}" wx:key="index" hidden="{{item.tags.length <= 0}}">
             <span class="item-tag">{{item.name}}</span>
           </span>
           <span class="item-author">{{item.author}}</span>
           <span class="item-publish-time">{{item.niceDate}}</span>
-</view>
+        </view>
         <view class="item-content">{{item.title}}</view>
         <span class='classify'>{{item.superChapterName}} / {{item.chapterName}}</span>
-        <view class="divider"></view>      </view>
+        <view class="divider"></view>
+      </view>
     </view>
   </scroll-view>
 </view>

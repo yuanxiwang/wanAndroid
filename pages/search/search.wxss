@@ -1,0 +1,17 @@
+/* pages/search/search.wxss */
+.viewTop{
+  width: 100%;
+  background: red;
+  display: flex;
+  align-items: center
+}
+.input{
+  flex: 1;
+  padding: 10rpx;
+}
+.searchIcon{
+  width: 50rpx;
+  height: 50rpx;
+  padding: 10rpx;
+  float: right
+}

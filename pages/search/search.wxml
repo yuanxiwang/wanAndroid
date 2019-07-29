@@ -1,0 +1,7 @@
+<!--pages/search/search.wxml-->
+<view class="container">
+  <view class="viewTop">
+    <input class="input" type="text" placeholder="发现更多干货" placeholder-style="color:white"></input>
+    <image class="searchIcon" src="../../images/index/ic_search_index.png"></image>
+  </view>
+</view>

@@ -8,7 +8,7 @@ Page({
   /**
    * 页面初始化数据
    */
-  data: {,
+  data: {
     airtcleList: [{
       "apkLink": "",
       "author": "stevewang",
@@ -137,4 +137,5 @@ Page({
     wx.navigateTo({
       url: '../web/web?webInfo=' + data.currentTarget.dataset.item.link
     })
+  }
 })

@@ -4,4 +4,7 @@
     <input class="input" type="text" placeholder="发现更多干货" placeholder-style="color:white"></input>
     <image class="searchIcon" src="../../images/index/ic_search_index.png"></image>
   </view>
+  <view style="width:100%">热门搜索</view>
+   <!-- 标签流 -->
+  <ab-label-flow class="label-flow" src="{{labels}}" bindlabeltap="labelTap"/>
 </view>

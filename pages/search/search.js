@@ -1,11 +1,14 @@
 // pages/search/search.js
+
+const LABEL_SOURCE = require('../../utils/label_flow_source.js');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    labels: LABEL_SOURCE.labels
   },
 
   /**

@@ -1,0 +1,15 @@
+/* pages/searchResult/searchResult.wxss */
+.container{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.title{
+  width: 100%;
+  padding: 10rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background: red;
+  color: white;
+}

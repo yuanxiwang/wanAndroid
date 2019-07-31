@@ -29,5 +29,8 @@ Page({
   }, 
   labelTap:function(data) {
     console.log(data)
+    wx.navigateTo({
+      url: '../searchResult/searchResult?keyWords=' + data.detail.dataset.item.name,
+    })
   },
 })

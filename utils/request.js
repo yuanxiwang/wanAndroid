@@ -1,20 +1,42 @@
 var app = getApp();
 //项目中URL相同的部分，减轻代码量， 同时方便代码迁移
-var host ='https://www.wanandroid.com/';
-function request(url, method, doSuccess, doFail){
+var host = 'https://www.wanandroid.com/';
+
+function request(url, method, doSuccess, doFail) {
   wx.request({
     url: host + url,
-    header:{
-      "content-type":"application/json;charset=UTF-8"
+    header: {
+      "content-type": "application/x-www-form-urlencoded;charset=UTF-8"
     },
-    method:method,
-    success:function(res){
+    method: method,
+    success: function(res) {
       /**
        * 参数值为res.data,直接将返回的数据传入
        */
       doSuccess(res.data);
     },
-    fail:function(){
+    fail: function() {
+      console.log("失败");
+      doFail();
+    }
+  })
+}
+
+function requestWithParam(url, method, param, doSuccess, doFail) {
+  wx.request({
+    url: host + url,
+    header: {
+      "content-type": "application/x-www-form-urlencoded;charset=UTF-8"
+    },
+    data: param,
+    method: method,
+    success: function(res) {
+      /**
+       * 参数值为res.data,直接将返回的数据传入
+       */
+      doSuccess(res.data);
+    },
+    fail: function() {
       console.log("失败");
       doFail();
     }
@@ -27,4 +49,5 @@ function request(url, method, doSuccess, doFail){
  * 项目目录不止一级，不同的js文件对应的工具类的位置不一样
  */
 module.exports.request = request;
+module.exports.requestWithParam = requestWithParam;
 // module.exports.getData = getData;

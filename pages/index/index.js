@@ -131,6 +131,7 @@ Page({
   },
   loadMoreFail: function() {
     console.log("加载失败")
+    wx.hideLoading();
   },
   itemClick: function(data) {
     console.log(data.currentTarget.dataset)

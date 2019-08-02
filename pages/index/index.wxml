@@ -21,7 +21,7 @@
           <span class="item-author">{{item.author}}</span>
           <span class="item-publish-time">{{item.niceDate}}</span>
         </view>
-        <view class="item-content">{{item.title}}</view>
+        <rich-text class="item-content" nodes="{{item.title}}"></rich-text>
         <span class='classify'>{{item.superChapterName}} / {{item.chapterName}}</span>
         <view class="divider"></view>
       </view>

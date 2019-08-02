@@ -1,8 +1,8 @@
 <!--pages/search/search.wxml-->
 <view class="container">
   <view class="viewTop">
-    <input class="input" type="text" placeholder="发现更多干货" placeholder-style="color:white"></input>
-    <image class="searchIcon" src="../../images/index/ic_search_index.png"></image>
+    <input class="input" type="text" placeholder="发现更多干货" bindinput="searchInput" placeholder-style="color:white"></input>
+    <image class="searchIcon" src="../../images/index/ic_search_index.png" bindtap="search"></image>
   </view>
   <view class='hot_search'>热门搜索</view>
   <!-- 标签流 -->

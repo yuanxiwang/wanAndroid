@@ -9,7 +9,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    labels: LABEL_SOURCE.labels
+    labels: LABEL_SOURCE.labels,
+    intputString:""
   },
 
   /**
@@ -33,4 +34,16 @@ Page({
       url: '../searchResult/searchResult?keyWords=' + data.detail.dataset.item.name,
     })
   },
+  searchInput:function(data){
+      var that = this;
+      that.setData({
+        intputString:data.detail.value
+      })
+  },
+  search:function(){
+    wx.navigateTo({
+      url: '../searchResult/searchResult?keyWords=' + this.data.intputString,
+    })
+  }
+
 })

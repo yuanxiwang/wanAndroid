@@ -1,2 +1,20 @@
 <!--pages/struck/struck.wxml-->
-<text>pages/struck/struck.wxml</text>
+<view class="container">
+  <view class="titleBar">
+    <span class="title">知识体系</span>
+    <image class="searchIcon" src="../../images/index/ic_search_index.png" mode="aspectFit" bindtap="searchClick"></image>
+  </view>
+  <view wx:for="{{data}}" wx:key="index" class="viewContent">
+    <view class="itemViewContent" bindtap="itemClick" data-item="{{item}}">
+      <view class="item_left">
+        <view class="item_type">{{item.name}}</view>
+        <!-- 标签流 -->
+        <ab-label-flow class="label-flow" src="{{item.children}}" bg_color="transparent" />
+      </view>
+      <view class="item_right">
+        <image class='iv_goto_right' src="../../images/struck/ic_goto_right.png"></image>
+      </view>
+    </view>
+    <view class="divider"></view>
+  </view>
+</view>

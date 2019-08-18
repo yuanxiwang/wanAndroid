@@ -1,1 +1,69 @@
 /* pages/struck/struck.wxss */
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.titleBar {
+  width: 100%;
+  background: red;
+  display: flex;
+  flex-direction: row;
+}
+
+.title {
+  flex: 1;
+  color: white;
+  padding: 10rpx;
+}
+
+.searchIcon {
+  width: 50rpx;
+  height: 50rpx;
+  padding: 10rpx;
+}
+.viewContent{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+.itemViewContent {
+  width: 100%;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center
+}
+
+.item_left {
+  flex: 1;
+}
+
+.item_right {
+  display: flex;
+  align-items: center
+}
+
+.item_type {
+  margin-left: 21rpx;
+  font-size: 30rpx;
+}
+
+.iv_goto_right {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.divider {
+  background: #999;
+  width: 100%;
+  height: 1rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}

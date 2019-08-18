@@ -1,14 +1,15 @@
 {
   "pages": [
-    "pages/search/search",
     "pages/index/index",
+    "pages/search/search",
     "pages/logs/logs",
     "pages/gzh/gzh",
     "pages/menu/menu",
     "pages/project/project",
     "pages/struck/struck",
     "pages/web/web",
-    "pages/searchResult/searchResult"
+    "pages/searchResult/searchResult",
+    "pages/struckDetailList/struckDetailList"
   ],
   "window": {
     "backgroundTextStyle": "light",

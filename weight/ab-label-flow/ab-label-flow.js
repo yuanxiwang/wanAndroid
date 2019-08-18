@@ -7,7 +7,8 @@ Component({
     // 数据源
     src: {
       type: Array
-    }
+    },
+    bg_color:{type:String}
   },
 
   methods: {

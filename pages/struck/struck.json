@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "ab-label-flow": "../../weight/ab-label-flow/ab-label-flow"
+  },
+  "navigationBarTitleText": "知识体系"
 }

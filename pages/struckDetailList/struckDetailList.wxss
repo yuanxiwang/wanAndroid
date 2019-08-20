@@ -1,1 +1,24 @@
 /* pages/struckDetailList/struckDetailList.wxss */
+.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.item-parent {
+  white-space: nowrap;
+  height: 70rpx;
+  background: red;
+  padding-bottom: 10rpx;
+}
+.title-item {
+  display: inline-block;
+  height: 50rpx;
+  color: white;
+  margin-right: 20rpx;
+  font-size: 26rpx;
+}
+.swpier-parent{
+  width: 100%;
+  flex: 1;
+  background: blue
+}

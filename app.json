@@ -10,6 +10,7 @@
     "pages/web/web",
     "pages/searchResult/searchResult",
     "pages/struckDetailList/struckDetailList"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

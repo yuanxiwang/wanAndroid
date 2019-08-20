@@ -69,7 +69,12 @@ Page({
   },
 
   itemClick:function(data){
-    console.log(data)
+    console.log(data.currentTarget.dataset.item);
+    var s = JSON.stringify(data.currentTarget.dataset.item);
+    console.log("Json : " + s);
+    wx.navigateTo({
+      url: '../struckDetailList/struckDetailList?subData=' + s,
+    })
   },
   searchClick:function(data){
     console.log(data);

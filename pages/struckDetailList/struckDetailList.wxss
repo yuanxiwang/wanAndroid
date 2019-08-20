@@ -1,24 +1,94 @@
 /* pages/struckDetailList/struckDetailList.wxss */
-.container{
-  width: 100%;
-  height: 100%;
-  display: flex;
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
 }
+
 .item-parent {
-  white-space: nowrap;
-  height: 70rpx;
-  background: red;
-  padding-bottom: 10rpx;
+    position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 66;
+    white-space: nowrap;
+    height: 70rpx;
+    padding-left: 20rpx;
+	padding-right: 20rpx;
+    background: red;
+    padding-bottom: 10rpx;
 }
+
 .title-item {
-  display: inline-block;
-  height: 50rpx;
-  color: white;
-  margin-right: 20rpx;
-  font-size: 26rpx;
+    display: inline-block;
+    height: 50rpx;
+    color: white;
+    margin-right: 20rpx;
+    font-size: 26rpx;
 }
-.swpier-parent{
-  width: 100%;
-  flex: 1;
-  background: blue
+
+.viewContent {
+    background: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80rpx;
+}
+
+.item-tag-author-time {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10rpx;
+}
+
+.item-tag {
+    border: 0.5rpx solid red;
+    border-radius: 10rpx;
+    font-size: 20rpx;
+    padding-left: 5rpx;
+    padding-right: 5rpx;
+    padding-bottom: 5rpx;
+    margin-right: 10rpx;
+    margin-left: 10rpx;
+    display: flex;
+    justify-content: center;
+}
+
+.item-author {
+    background: white;
+    font-size: 30rpx;
+    display: inline;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.item-publish-time {
+    font-size: 30rpx;
+    display: inline;
+    margin-right: 20rpx;
+}
+
+.item-content {
+    width: 100%;
+    display: flex;
+    margin-top: 20rpx;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+}
+
+.divider {
+    background: #999;
+    margin-top: 20rpx;
+    width: 100%;
+    height: 1rpx;
+    padding-left: 10rpx;
+    padding-right: 10rpx;
+}
+
+.classify {
+    font-size: 25rpx;
+    margin-left: 10rpx;
+    margin-top: 20rpx;
+    color: #999;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

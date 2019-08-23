@@ -1,2 +1,20 @@
-<!--pages/gzh/gzh.wxml-->
-<text>pages/gzh/gzh.wxml</text>
+<!--pages/struckDetailList/struckDetailList.wxml-->
+<view class="container">
+    <scroll-view class='item-parent' scroll-x="true">
+        <view wx:for='{{subData}}' wx:key='index' class='title-item' style='border-bottom: 5rpx {{current == index ? selectindicatorcolor : normalindicatorcolor}} solid' bindtap='taptab' data-index='{{index}}'>{{item.name}}</view>
+    </scroll-view>
+    <view wx:for="{{airtcleList}}" wx:key="index" class="viewContent" style="margin-top: {{index == 0 ? 90 : 10}}rpx">
+        <view bindtap="itemClick" data-item="{{item}}">
+            <view class="item-tag-author-time">
+                <span wx:for="{{item.tags}}" wx:key="index" hidden="{{item.tags.length <= 0}}">
+                    <span class="item-tag">{{item.name}}</span>
+                </span>
+                <span class="item-author">{{item.author}}</span>
+                <span class="item-publish-time">{{item.niceDate}}</span>
+            </view>
+            <rich-text class="item-content" nodes="{{item.title}}"></rich-text>
+            <span class='classify'>{{item.superChapterName}} / {{item.chapterName}}</span>
+            <view class="divider"></view>
+        </view>
+    </view>
+</view>

@@ -3,7 +3,7 @@
     <scroll-view class='item-parent' scroll-x="true">
         <view wx:for='{{subData}}' wx:key='index' class='title-item' style='border-bottom: 5rpx {{current == index ? selectindicatorcolor : normalindicatorcolor}} solid' bindtap='taptab' data-index='{{index}}'>{{item.name}}</view>
     </scroll-view>
-    <view wx:for="{{airtcleList}}" wx:key="index" class="viewContent">
+    <view wx:for="{{airtcleList}}" wx:key="index" class="viewContent" style="margin-top:{{index == 0? 90 : 10}}rpx">
         <view bindtap="itemClick" data-item="{{item}}">
             <view class="item-tag-author-time">
                 <span wx:for="{{item.tags}}" wx:key="index" hidden="{{item.tags.length <= 0}}">

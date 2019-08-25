@@ -1,66 +1,91 @@
 // pages/menu/menu.js
+const LABEL_SOURCE = require('../../utils/label_flow_source.js');
+var call = require("../../utils/request.js")
+var currentIndex = 0;
 Page({
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
+    /**
+     * 页面的初始数据
+     */
+    data: {
+        firstData: [{
+            "articles": [{
+                "apkLink": "",
+                "author": "小编",
+                "chapterId": 272,
+                "chapterName": "常用网站",
+                "collect": false,
+                "courseId": 13,
+                "desc": "",
+                "envelopePic": "",
+                "fresh": false,
+                "id": 1848,
+                "link": "https://developers.google.cn/",
+                "niceDate": "2018-01-07",
+                "origin": "",
+                "prefix": "",
+                "projectLink": "",
+                "publishTime": 1515322795000,
+                "superChapterId": 0,
+                "superChapterName": "",
+                "tags": [],
+                "title": "Google开发者",
+                "type": 0,
+                "userId": -1,
+                "visible": 0,
+                "zan": 0
+            }],
+            "cid": 272,
+            "name": "常用网站",
+            "labels": [{
+                "url": "https://developers.google.cn/",
+                "name": "google开发者"
+            }]
+        }]
+    },
 
-  },
+    /**
+     * 生命周期函数--监听页面加载
+     */
+    onLoad: function(options) {
+        call.request("/navi/json", "GET", this.onSuccess, this.onFailed);
+    },
+    onSuccess: function(data) {
+        let i;
+		var firstArray = new Array();
+        for (i in data.data) {      
+            var first = data.data[i].articles;
+			var labelsData = new Array();
+            for (let index = 0; index < first.length; index++) {
+                labelsData[index] = new Label(first[index].link, first[index].title);
+            };
+			var firstLabel = {
+				"articles":data.data[i],
+				"labels":labelsData
+			};
+			firstArray[i] = firstLabel;
+        }
+        this.setData({
+            firstData: firstArray
+        });
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
+    },
+    onFailed(data) {
+        console.log("获取失败")
+    },
+    leftClick: function(data) {
+        console.log(data);
+    },
+	labelTap: function(data){
+		console.log(data)
+		wx.navigateTo({
+			url: '../web/web?webInfo=' + data.detail.dataset.item.url,
+		})
+	}
 })
+class Label {
+    constructor(url, name) {
+        this.url = url;
+        this.name = name;
+    }
+}

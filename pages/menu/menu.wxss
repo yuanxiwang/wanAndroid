@@ -1,1 +1,37 @@
 /* pages/menu/menu.wxss */
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10rpx 0;
+    box-sizing: border-box;
+}
+
+.container-left {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.first-item{
+	width: 100%;
+	padding-bottom: 70rpx;
+	padding-top: 30rpx;
+	background: #d1d1d1;
+	text-align: center;
+}
+
+.container-right {
+    width: 70%;
+    height: 1200rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.label-flow {
+    background: white;
+    padding-top: 18rpx;
+    padding-left: 20rpx;
+}

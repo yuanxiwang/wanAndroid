@@ -1,2 +1,14 @@
 <!--pages/menu/menu.wxml-->
-<text>pages/menu/menu.wxml</text>
+<view class="container">
+    <scroll-view class="container-left" scroll-y="true">
+        <view wx:for="{{firstData}}" wx:key="index" class="firstClass">
+            <view class="first-item" bindtap="leftClick" data-id="{{item.articles.cid}}">{{item.articles.name}}</view>
+        </view>
+    </scroll-view>
+    <scroll-view class="container-right" scroll-y="true">
+        <view wx:for="{{firstData}}" wx:key="index" class="secendClass">
+            <view class="type">{{item.articles.name}}</view>
+            <ab-label-flow class="label-flow" src="{{item.labels}}" bindlabeltap="labelTap" />
+        </view>
+    </scroll-view>
+</view>

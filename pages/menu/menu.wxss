@@ -21,13 +21,16 @@
 	padding-top: 30rpx;
 	background: #d1d1d1;
 	text-align: center;
+  color: black;
 }
 
 .container-right {
     width: 70%;
-    height: 1200rpx;
-    display: flex;
-    flex-direction: column;
+    height: 100%;
+}
+
+.secendClass{
+  padding-left: 20rpx;
 }
 
 .label-flow {

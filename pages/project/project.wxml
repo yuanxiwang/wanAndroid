@@ -1,2 +1,20 @@
 <!--pages/project/project.wxml-->
-<text>pages/project/project.wxml</text>
+<view class="container">
+  <scroll-view class='item-parent' scroll-x="true">
+    <view wx:for='{{data}}' wx:key='index' class='title-item' style='border-bottom: 5rpx {{current == index ? selectindicatorcolor : normalindicatorcolor}} solid' bindtap='taptab' data-index='{{index}}'>{{item.name}}</view>
+  </scroll-view>
+  <view wx:for="{{datas}}" wx:key="index" class="viewContent" style="margin-top: {{index == 0 ? 90 : 10}}rpx">
+    <view bindtap="itemClick" data-item="{{item}}">
+      <image class='img_left' src="{{item.envelopePic}}"></image>
+      <view class="right-container">
+        <label class="title-name">{{item.title}}</label>
+        <textarea class="proDesc"></textarea>
+        <view class="author-time">
+          <label class="author">{{item.author}}</label>
+          <label class="time">{{item.niceDate}}</label>
+        </view>
+      </view>
+    </view>
+    <view class="divider"></view>
+  </view>
+</view>

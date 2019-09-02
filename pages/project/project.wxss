@@ -1,1 +1,47 @@
 /* pages/project/project.wxss */
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.item-parent {
+    position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 66;
+    white-space: nowrap;
+    height: 70rpx;
+    padding-left: 20rpx;
+	padding-right: 20rpx;
+    background: red;
+    padding-bottom: 10rpx;
+}
+
+.title-item {
+    display: inline-block;
+    height: 50rpx;
+    color: white;
+    margin-right: 20rpx;
+    font-size: 26rpx;
+}
+
+.viewContent {
+    background: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.img_left{
+  width: 30%;
+  height: 100%;
+}
+
+.divider{
+  background: #999;
+    margin-top: 20rpx;
+    width: 100%;
+    height: 1rpx;
+    padding-left: 10rpx;
+    padding-right: 10rpx;
+}

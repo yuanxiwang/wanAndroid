@@ -1,14 +1,14 @@
 <!--pages/project/project.wxml-->
 <view class="container">
   <scroll-view class='item-parent' scroll-x="true">
-    <view wx:for='{{data}}' wx:key='index' class='title-item' style='border-bottom: 5rpx {{current == index ? selectindicatorcolor : normalindicatorcolor}} solid' bindtap='taptab' data-index='{{index}}'>{{item.name}}</view>
+    <text wx:for='{{data}}' wx:key='index' class='title-item' style='border-bottom: 5rpx {{current == index ? selectindicatorcolor : normalindicatorcolor}} solid' bindtap='taptab' data-index='{{index}}'>{{item.name}}</text>
   </scroll-view>
   <view wx:for="{{datas}}" wx:key="index" class="viewContent" style="margin-top: {{index == 0 ? 90 : 10}}rpx">
-    <view bindtap="itemClick" data-item="{{item}}">
+    <view bindtap="itemClick" data-item="{{item}}" class="item-view">
       <image class='img_left' src="{{item.envelopePic}}"></image>
       <view class="right-container">
         <label class="title-name">{{item.title}}</label>
-        <textarea class="proDesc"></textarea>
+        <text class='proDesc'>{{item.desc}}</text>
         <view class="author-time">
           <label class="author">{{item.author}}</label>
           <label class="time">{{item.niceDate}}</label>
